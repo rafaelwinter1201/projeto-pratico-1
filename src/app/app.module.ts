@@ -1,21 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-//Modules
-import { HomeModule } from './modules/home/home.module';
-import { FoodListComponent } from './shared/food-list/food-list.component';
 
+import { AppComponent } from './app.component';
+import { TitleComponent } from './title/title.component';
+import { DataBidingComponent } from './data-biding/data-biding.component';
+import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
+import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
+
+import { SharedModule } from './shared/shared.module';
+import { FormsComponent } from './forms/forms.component';
 @NgModule({
   declarations: [
     AppComponent,
-    FoodListComponent
+    TitleComponent,
+    DataBidingComponent,
+    DiretivasEstruturaisComponent,
+    DiretivasAtributosComponent,
+    FormsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule
+    FormsModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
